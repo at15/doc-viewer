@@ -1,0 +1,11 @@
+{
+  "name": "doc-viewer",
+  "version": "0.0.1",
+  "private":false,
+  "homepage":"https://github.com/at15/doc-viewer",
+  "repository":"https://github.com/at15/doc-viewer",
+  "dependencies":{
+    "marked":"0.3.3",
+    "express":"4.x"
+  }
+}
