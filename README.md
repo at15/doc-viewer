@@ -4,6 +4,10 @@
 
 View and edit your local markdown documentations in browser.
 
+## Develop
+
+- npm install
+
 ## RoadMap
 
 - simple render
