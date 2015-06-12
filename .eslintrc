@@ -1,0 +1,11 @@
+{
+  "env": {
+    "browser": false,
+    "node": true
+  },
+  "rules": {
+    "quotes": "single",
+    "no-underscore-dangle": 0,
+    "eol-last": false
+  }
+}

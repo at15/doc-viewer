@@ -3,9 +3,25 @@
   "version": "0.0.1",
   "private":false,
   "homepage":"https://github.com/at15/doc-viewer",
-  "repository":"https://github.com/at15/doc-viewer",
-  "dependencies":{
-    "marked":"0.3.3",
-    "express":"4.x"
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/at15/doc-viewer.git"
+  },
+  "author": "at15",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha":"latest",
+    "chai": "latest",
+    "lodash": "latest",
+    "gulp": "^3.8.1",
+    "gulp-eslint": "latest",
+    "gulp-mocha": "latest"
+  },
+  "dependencies": {
+    "marked": "0.3.3",
+    "express": "4.x"
+  },
+  "scripts": {
+    "test": "gulp test"
   }
 }

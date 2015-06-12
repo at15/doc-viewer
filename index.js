@@ -4,3 +4,4 @@
 
 // TODO: config
 var docRoot = "./doc";
+console.log(docRoot);
