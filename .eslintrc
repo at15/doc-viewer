@@ -4,8 +4,8 @@
     "node": true
   },
   "rules": {
-    "quotes": "single",
+    "quotes": [1,"single"],
     "no-underscore-dangle": 0,
-    "eol-last": false
+    "eol-last":0
   }
 }

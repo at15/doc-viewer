@@ -4,7 +4,7 @@
 
 'use strict';
 // TODO: config
-var docRoot = "./doc";
+var docRoot = './doc';
 var port = 3000;
 
 console.log(docRoot);

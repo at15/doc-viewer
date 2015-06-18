@@ -13,13 +13,28 @@ describe('Generate toc from markdown header', function () {
         var result = toc.result();
         //console.log('toc result is' + result);
         //console.log(JSON.parse(toc.result()));
-        expect(result).to.eql({jack: {level: 1}});
+        expect(result).to.eql({
+            //_name:'jack',
+            _hasChild: true,
+            jack: {
+                _hasChild: false,
+                level: 1
+            }
+        });
     });
     it('add h2 to the next level', function () {
         toc.start();
         toc.add('jack', 1);
         toc.add('jack dog', 2);
-        expect(toc.result()).to.eql({jack: {level: 1, 'jack dog': {level: 2}}});
+        expect(toc.result()).to.eql({
+            _hasChild: true,
+            jack: {
+                level: 1, _hasChild: true, 'jack dog': {
+                    _hasChild: false,
+                    level: 2
+                }
+            }
+        });
     });
     it('add h2 after a h3, should add a new h2', function () {
         toc.start();
@@ -30,17 +45,23 @@ describe('Generate toc from markdown header', function () {
         toc.add('chap2.1', 3);
         expect(toc.result()).to.eql(
             {
+                _hasChild: true,
                 'main title': {
+                    _hasChild: true,
                     level: 1,
                     chap1: {
+                        _hasChild: true,
                         level: 2,
                         'chap1.1': {
+                            _hasChild: false,
                             level: 3
                         }
                     },
                     chap2: {
+                        _hasChild: true,
                         level: 2,
                         'chap2.1': {
+                            _hasChild: false,
                             level: 3
                         }
                     }
