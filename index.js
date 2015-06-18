@@ -18,15 +18,18 @@ var render = require('./lib/render');
 app.use(express.static('public'));
 app.get('/doc', function (req, res) {
     var fileName = path.join(docRoot, req.query.f);
+    console.log('get request for file ', fileName);
     // TODO:support folder
     //var readeMe = path.dirname(fileName) + '/README.md';
     if (!fs.existsSync(fileName)) {
         res.status(404).send('file ' + fileName + 'doesn\'t exist');
     } else {
         res.status(200).send(
-            render.highlight(fs.readFileSync(fileName, {encoding: 'UTF-8'}))
+            //render.highlight(fs.readFileSync(fileName, {encoding: 'UTF-8'}))
+            render.useToc(fs.readFileSync(fileName, {encoding: 'UTF-8'}))
         );
     }
 });
 
 app.listen(port);
+console.log('server init!');
