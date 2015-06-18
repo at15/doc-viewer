@@ -26,7 +26,8 @@ app.get('/doc', function (req, res) {
     } else {
         res.status(200).send(
             //render.highlight(fs.readFileSync(fileName, {encoding: 'UTF-8'}))
-            render.useToc(fs.readFileSync(fileName, {encoding: 'UTF-8'}))
+            '<html><head><title>demo</title><link rel="stylesheet" href="default.css"/></head><body>' +
+            render.useToc(fs.readFileSync(fileName, {encoding: 'UTF-8'})) + '</body></html>'
         );
     }
 });

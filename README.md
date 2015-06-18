@@ -10,6 +10,8 @@ View and edit your local markdown documentations in browser.
 - `node index.js` to start server
 - `localhost:3000/doc?f=README.md` and you will see a markdown doc with toc and code highlight.
 
+![screen](public/screen.PNG)
+
 ## RoadMap
 
 - [x] simple render
