@@ -1,13 +1,9 @@
 #!/usr/bin/env node
 
-/**
- * Created by Pillar on 2015/6/19.
- */
-
-var process = require('process');
-var server = require('./lib/server');
+var path = require('path');
+var server = require('../lib/server');
 // TODO:set it to current working dir.
 //server.setDocRoot();
-console.log(process.cwd());
-server.setDocRoot(process.cwd());
+//console.log(process.cwd());
+server.setDocRoot(path.join(process.cwd(), 'doc'));
 server.start();
