@@ -1,15 +1,18 @@
 {
   "name": "doc-viewer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private":false,
+  "author": "at15",
+  "license": "MIT",
   "description":"start a local server to view markdown doc",
   "homepage":"https://github.com/at15/doc-viewer",
   "repository":{
     "type": "git",
     "url": "https://github.com/at15/doc-viewer.git"
   },
-  "author": "at15",
-  "license": "MIT",
+  "bin":{
+    "doc-viewer":"./bin/doc-viewer"
+  },
   "devDependencies": {
     "mocha":"latest",
     "chai": "latest",
