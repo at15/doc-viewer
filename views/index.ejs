@@ -3,9 +3,23 @@
 <head>
     <title><%= title %></title>
     <!--style for highlight.js-->
-    <link rel="stylesheet" href="/default.css"/>
+    <!--TODO: idea cant show hint for the assets -->
+    <link rel="stylesheet" href="/assets/style/vendor/highlight.js/default.css"/>
+    <link rel="stylesheet" href="/assets/style/color.css"/>
+    <link rel="stylesheet" href="/assets/style/layout.css"/>
 </head>
 <body>
-    <%- markdown %>
+<!--A slide bar to show search and folder or category?  -->
+<div class="sidebar dark-blue-bkg">
+    <h2>Doc viewer</h2>
+    <div>A da da</div>
+</div>
+<div class="markdown-content">
+    <%- markdown.content %>
+</div>
+<div class="markdown-toc">
+    <%- markdown.toc %>
+</div>
+<div class="cls"></div>
 </body>
 </html>

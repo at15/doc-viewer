@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+}
+ul{
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top:0;
+    left: 0;
+
+    padding: 10px;
+
+    width: 18%;
+    height: 100%;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.markdown-content {
+
+    margin-left: 20%;
+    padding: 10px;
+
+    width: 75%;
+    height: 100%;
+
+    overflow: auto;
+}
+
+.markdown-toc{
+    position: fixed;
+    top:0;
+    right: 0;
+
+    padding: 10px;
+    width: 18%;
+}
+
+.cls{
+    clear: both;
+    height: 1px;
+}
