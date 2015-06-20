@@ -2,6 +2,5 @@
 
 'use strict';
 var server = require('../lib/server');
-// TODO:set it to current working dir.
 server.setDocRoot(process.cwd());
 server.start();

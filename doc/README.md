@@ -5,6 +5,7 @@
 ### view doc in a specific folder
 
 [foo](foo/README.md)
+![screen](screen2.PNG)
 
 make sure node has read access to that folder
 

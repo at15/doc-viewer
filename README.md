@@ -4,11 +4,18 @@
 
 View and edit your local markdown documentations in browser.
 
+## Usage
+
+- `npm install -g doc-viewer`
+- run `doc-viewer` in the folder where you have your doc, it will start a server.
+- `localhost:3000/fileName.md` to view rendered markdown
+- it also works like the simple http server in python.
+
 ## Develop
 
 - npm install
 - `node index.js` to start server
-- `localhost:3000/doc?f=README.md` and you will see a markdown doc with toc and code highlight.
+- `localhost:3000/README.md` and you will see the markdown in this projects `doc` folder
 
 ![screen](public/screen.PNG)
 
@@ -16,6 +23,6 @@ View and edit your local markdown documentations in browser.
 
 - [x] simple render
 - [ ] allow combine options, toc, highlight etc.
-- [ ] make links in markdown work.
+- [x] make links in markdown work.
 - [ ] parse all markdown file and generate html and search.
-- [ ] a global command line. `npm install -g doc-viewer`, then you can use it like python's simple server
+- [x] a global command line. `npm install -g doc-viewer`, then you can use it like python's simple server
