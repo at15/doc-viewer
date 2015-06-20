@@ -11,6 +11,8 @@ View and edit your local markdown documentations in browser.
 - `localhost:3000/fileName.md` to view rendered markdown
 - it also works like the simple http server in python.
 
+You can update current version using `npm update -g doc-viewer`
+
 ## Develop
 
 - npm install
