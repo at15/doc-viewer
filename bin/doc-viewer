@@ -1,9 +1,7 @@
 #!/usr/bin/env node
 
-var path = require('path');
+'use strict';
 var server = require('../lib/server');
 // TODO:set it to current working dir.
-//server.setDocRoot();
-//console.log(process.cwd());
-server.setDocRoot(path.join(process.cwd(), 'doc'));
+server.setDocRoot(process.cwd());
 server.start();
