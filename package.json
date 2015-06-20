@@ -24,7 +24,9 @@
   "dependencies": {
     "marked": "0.3.3",
     "highlight.js":"latest",
-    "express": "4.x"
+    "express": "4.x",
+    "ejs":"2.3.x",
+    "morgan":"latest"
   },
   "scripts": {
     "test": "gulp test"
