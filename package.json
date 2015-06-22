@@ -19,7 +19,10 @@
     "lodash": "latest",
     "gulp": "^3.8.1",
     "gulp-eslint": "latest",
-    "gulp-mocha": "latest"
+    "gulp-mocha": "latest",
+    "gulp-concat": "latest",
+    "gulp-watch": "latest",
+    "gulp-sass": "latest"
   },
   "dependencies": {
     "marked": "0.3.3",
