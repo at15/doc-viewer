@@ -15,7 +15,7 @@ You can update current version using `npm update -g doc-viewer`
 
 ## Develop
 
-- npm install
+- npm install NOTE: you have to run as admin in windows in order to install node-sass
 - `node index.js` to start server
 - `localhost:3000/README.md` and you will see the markdown in this projects `doc` folder
 
