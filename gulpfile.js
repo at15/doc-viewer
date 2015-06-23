@@ -8,7 +8,6 @@ var gulp = require('gulp');
 var eslint = require('gulp-eslint');
 var mocha = require('gulp-mocha');
 var concat = require('gulp-concat');
-//var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 
 var publicFolder = './public';
@@ -35,7 +34,16 @@ gulp.task('style', function () {
         .pipe(gulp.dest(publicFolder + '/assets/style'));
 });
 
+gulp.task('build', ['lint', 'style'], function () {
+    console.log('Building...');
+});
+
 // TODO: contact script and watch. (auto reload may also be a good thing)
+gulp.task('watch', function () {
+    gulp.watch(scssFiles, ['build']).on('change', function (file) {
+        console.log(file.path, ' changed');
+    });
+});
 
 gulp.task('test', ['lint'], function () {
     return gulp.src(
