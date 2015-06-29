@@ -4,7 +4,7 @@
 'use strict';
 var chai = require('chai');
 var expect = chai.expect;
-var toc = require('../lib/toc');
+var toc = require('../lib/render/toc');
 describe('toc render', function () {
     it('return rendered html', function () {
         toc.start();

@@ -38,7 +38,7 @@ gulp.task('build', ['lint', 'style'], function () {
     console.log('Building...');
 });
 
-// TODO: contact script and watch. (auto reload may also be a good thing)
+// TODO: (auto reload may also be a good thing)
 gulp.task('watch', function () {
     gulp.watch(scssFiles, ['build']).on('change', function (file) {
         console.log(file.path, ' changed');
@@ -50,6 +50,14 @@ gulp.task('test', ['lint'], function () {
         'test/*.js'
     )
         .pipe(mocha());
+});
+
+gulp.task('server', function () {
+    require('./index');
+});
+
+gulp.task('dev', ['build', 'server', 'watch'], function () {
+
 });
 
 gulp.task('default', ['test'], function () {
