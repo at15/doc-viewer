@@ -4,7 +4,7 @@
 'use strict';
 var chai = require('chai');
 var expect = chai.expect;
-var toc = require('../lib/render/toc');
+var toc = require('../lib/util/toc');
 
 describe('Generate toc from markdown header', function () {
     it('add h1 to first level', function () {
