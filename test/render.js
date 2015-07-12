@@ -19,6 +19,7 @@ describe('Test if gfm is working', function () {
 });
 
 describe('Test code highlight', function () {
+    // TODO: highlight is really slow, 150ms....
     it('highlight js', function () {
         expect(render.highlight('````javascript\nvar s = 1\n````')).to.equal('<pre>' +
         '<code class="lang-javascript">' +
