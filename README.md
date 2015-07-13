@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/at15/doc-viewer.svg?branch=master)](https://travis-ci.org/at15/doc-viewer)
 
+![logo](public/doc-viewer.PNG)
+
 View and edit your local markdown documentations in browser.
 
 ## Usage
