@@ -3,9 +3,7 @@
 <head>
     <title><%= title %></title>
     <!--style for highlight.js-->
-    <!--TODO: idea cant show hint for the assets -->
-    <link rel="stylesheet" href="/assets/style/vendor/highlight.js/default.css"/>
-    <link rel="stylesheet" href="/assets/style/bundle.css"/>
+    <%- include style.ejs %>
 </head>
 <body>
 <!--A slide bar to show search and folder or category?  -->
@@ -20,5 +18,6 @@
     <%- markdown.toc %>
 </div>
 <div class="cls"></div>
+<%- include script.ejs %>
 </body>
 </html>
