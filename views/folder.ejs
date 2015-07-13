@@ -1,5 +1,5 @@
 <ul>
     <% for(var i = 0;i < dir.length;i++) { %>
-    <li><%= dir[i].path %> <%= dir[i].dir %></li>
+    <li><a href="<%= dir[i].path %>"><%= dir[i].path %> <%= dir[i].dir %></a></li>
     <% } %>
 </ul>
