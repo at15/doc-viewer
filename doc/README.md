@@ -2,6 +2,8 @@
 
 ## Usage
 
+type `doc-viewer` in your doc folder and then open your browser `localhost:3000`
+
 ### view doc in a specific folder
 
 [foo](foo/README.md)

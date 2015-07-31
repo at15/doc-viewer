@@ -16,6 +16,11 @@ var scssFiles = [
     './views/assets/style/**/*.scss'
 ];
 
+//var jsFiles = [
+//    './lib/*.js',
+//    './lib/**/*.js'
+//];
+
 gulp.task('lint', function () {
     return gulp.src([
         '*.js',
@@ -43,6 +48,8 @@ gulp.task('watch', function () {
     gulp.watch(scssFiles, ['build']).on('change', function (file) {
         console.log(file.path, ' changed');
     });
+    // TODO: auto reload
+    // gulp.watch(jsFiles, ['lint'])
 });
 
 gulp.task('test', ['lint'], function () {
