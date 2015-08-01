@@ -3,6 +3,7 @@
 
 # force lf for js and sh files
 
+bin/doc-viewer eol=lf
 *.js eol=lf
 *.sh eol=lf
 *.md eol=lf
