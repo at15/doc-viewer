@@ -1,3 +1,6 @@
+# disable auto crlf
+* text=false
+
 # force lf for js and sh files
 
 *.js eol=lf
