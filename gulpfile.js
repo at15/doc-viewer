@@ -4,6 +4,7 @@
 
 'use strict';
 
+var fs = require('fs');
 var childProcess = require('child_process');
 var serverProcess = false;
 
@@ -46,30 +47,29 @@ gulp.task('build', ['lint', 'style'], function () {
 });
 
 gulp.task('stop-server', function () {
-    if (serverProcess) {
-        //serverProcess.send({cmd: 'SIGTERM'});
-        serverProcess.kill();
-    }
-    //serverProcess = childProcess.fork('./index');
-    //// TODO:this won't work.
-    //serverProcess.stdout.on('data', function (data) {
-    //    console.log('stdout: ' + data);
-    //});
-    //require('./index');
+    serverProcess.kill();
 });
 
 gulp.task('start-server', function () {
     serverProcess = childProcess.fork('./index');
-    console.log(serverProcess.pid);
+    fs.writeFileSync('doc-viewer.pid', serverProcess.pid);
+});
+
+// kill child process when exit
+process.on('exit', function() {
+    if(serverProcess){
+        console.log('Kill child process ' + serverProcess.pid);
+        serverProcess.kill();
+    }
 });
 
 // TODO: (auto reload may also be a good thing)
 gulp.task('watch', function () {
     gulp.watch(scssFiles, ['build']).on('change', function (file) {
-        console.log(file.path, ' changed');
+        console.log('Rebuilding because ' + file.path + ' has changed');
     });
     gulp.watch(jsFiles, ['stop-server', 'start-server']).on('change', function (file) {
-        console.log(file.path, ' changed ');
+        console.log('Restarting server because ' + file.path + ' has changed');
     });
 });
 
@@ -79,7 +79,6 @@ gulp.task('test', ['lint'], function () {
     )
         .pipe(mocha());
 });
-
 
 gulp.task('dev', ['build', 'watch', 'start-server'], function () {
 
