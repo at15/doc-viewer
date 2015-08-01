@@ -21,7 +21,7 @@ describe('Traverse folder', function () {
 
     it('read only one layer and return json', function () {
         var r = folder.readDir('./test/traverse-me');
-        expect(r).to.eql(
+        expect(r.files).to.eql(
             [
                 {
                     dir: true,
@@ -34,4 +34,6 @@ describe('Traverse folder', function () {
             ]
         );
     });
+
+    // TODO: add test for readMe
 });
