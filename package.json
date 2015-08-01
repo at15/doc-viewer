@@ -1,10 +1,10 @@
 {
   "name": "doc-viewer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private":false,
   "author": "at15",
   "license": "MIT",
-  "description":"start a local server to view markdown doc",
+  "description":"A local server to view markdown doc",
   "homepage":"https://github.com/at15/doc-viewer",
   "repository":{
     "type": "git",
