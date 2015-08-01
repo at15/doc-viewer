@@ -11,6 +11,12 @@
     <li><a href="<%= dir[i].path %>"><%= dir[i].path %> <%= dir[i].dir %></a></li>
     <% } %>
 </ul>
+<div class="markdown-content">
+    <%- markdown.content %>
+</div>
+<div class="markdown-toc">
+    <%- markdown.toc %>
+</div>
 <%- include script.ejs %>
 </body>
 </html>
