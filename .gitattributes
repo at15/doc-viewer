@@ -1,0 +1,5 @@
+# force lf for js and sh files
+
+*.js eol=lf
+*.sh eol=lf
+*.md eol=lf
