@@ -8,8 +8,11 @@
 <body>
 <!--A slide bar to show search and folder or category?  -->
 <div class="sidebar dark-blue-bkg">
-    <h2>Doc viewer</h2>
-    <div>A da da</div>
+    <ul>
+        <% for(var i = 0;i < dir.length;i++) { %>
+        <li><a href="<%= dir[i].path %>"><%= dir[i].path %> <%= dir[i].dir %></a></li>
+        <% } %>
+    </ul>
 </div>
 <div class="markdown-content">
     <%- markdown.content %>
