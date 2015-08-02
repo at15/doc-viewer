@@ -14,6 +14,8 @@ var mocha = require('gulp-mocha');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 
+var _ = require('lodash');
+
 var publicFolder = './public';
 var scssFiles = [
     './views/assets/style/*.scss',
@@ -22,6 +24,10 @@ var scssFiles = [
 var jsFiles = [
     './lib/*.js',
     './lib/**/*.js'
+];
+
+var frontScript = [
+    './views/assets/javascript/*.js'
 ];
 
 gulp.task('lint', function () {
@@ -35,6 +41,14 @@ gulp.task('lint', function () {
         .pipe(eslint.failOnError());
 });
 
+// TODO: add js build task
+gulp.task('front-script', function () {
+    gulp.src(frontScript)
+        .pipe(concat('bundle.js'))
+        .pipe(gulp.dest(publicFolder + '/assets/script'));
+
+});
+
 gulp.task('style', function () {
     gulp.src(scssFiles)
         .pipe(sass())
@@ -42,7 +56,7 @@ gulp.task('style', function () {
         .pipe(gulp.dest(publicFolder + '/assets/style'));
 });
 
-gulp.task('build', ['lint', 'style'], function () {
+gulp.task('build', ['lint', 'style', 'front-script'], function () {
     console.log('Building...');
 });
 
@@ -56,8 +70,8 @@ gulp.task('start-server', function () {
 });
 
 // kill child process when exit
-process.on('exit', function() {
-    if(serverProcess){
+process.on('exit', function () {
+    if (serverProcess) {
         console.log('Kill child process ' + serverProcess.pid);
         serverProcess.kill();
     }
@@ -65,7 +79,7 @@ process.on('exit', function() {
 
 // TODO: (auto reload may also be a good thing)
 gulp.task('watch', function () {
-    gulp.watch(scssFiles, ['build']).on('change', function (file) {
+    gulp.watch(_.union(scssFiles, frontScript), ['build']).on('change', function (file) {
         console.log('Rebuilding because ' + file.path + ' has changed');
     });
     gulp.watch(jsFiles, ['stop-server', 'start-server']).on('change', function (file) {
