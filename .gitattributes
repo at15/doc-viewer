@@ -5,5 +5,7 @@
 
 bin/doc-viewer eol=lf
 *.js eol=lf
+*.css eol=lf
+*.scss eol=lf
 *.sh eol=lf
 *.md eol=lf
