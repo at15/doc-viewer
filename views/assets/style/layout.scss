@@ -1,11 +1,22 @@
 // TODO: better layout. responsive if possible
 
 body{
+    // for affix
+    position: relative;
+
     margin: 0;
 }
 
 ul{
     margin: 0;
+}
+
+ul .affix{
+    top: 30px; /* Set the top position of pinned element */
+}
+
+li.active {
+    background-color: yellow;
 }
 
 .sidebar {
