@@ -11,7 +11,7 @@ describe('toc render', function () {
         toc.add('jack', 1);
         var result = toc.result();
         var rendered = toc.render(result);
-        expect(rendered).to.equal('<ul><li>jack</li></ul>');
+        expect(rendered).to.equal('<a href="#jack">jack</a>');
     });
     it('render level 2', function () {
         toc.start();
@@ -19,6 +19,8 @@ describe('toc render', function () {
         toc.add('jack house', 2);
         var result = toc.result();
         var rendered = toc.render(result);
-        expect(rendered).to.equal('<ul><li>jack<ul><li>jack house</li></ul></li></ul>');
+        expect(rendered).to.equal('<a href="#jack">jack</a>\n' +
+            '<ul>\n' +
+            '<li><a href="#jack house">jack house</a></li>\n</ul>\n');
     });
 });

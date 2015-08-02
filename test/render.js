@@ -31,7 +31,7 @@ describe('Test code highlight', function () {
 describe('Test toc', function () {
     it('return rendered toc and content at same time', function () {
         expect(render.withToc('#ha')).to.eql({
-            toc: '<ul><li>ha</li></ul>',
+            toc: '<a href="#ha">ha</a>',
             content: '<h1 id="ha">ha</h1>'
         });
     });
