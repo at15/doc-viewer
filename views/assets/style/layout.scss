@@ -11,18 +11,6 @@ ul{
     margin: 0;
 }
 
-ul .affix{
-    top: 30px; /* Set the top position of pinned element */
-}
-
-li.active > a {
-    background-color: yellow;
-}
-
-//ul.affix > li.active > a {
-//    background-color: transparent;
-//}
-
 .sidebar {
     position: fixed;
     top:0;
