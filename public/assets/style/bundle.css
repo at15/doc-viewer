@@ -21,6 +21,10 @@ ul {
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto; }
+  .sidebar li {
+    list-style: none; }
+  .sidebar a {
+    color: white; }
 
 .markdown-content {
   margin-left: 20%;
@@ -35,6 +39,8 @@ ul {
   right: 0;
   padding: 10px;
   width: 18%; }
+  .markdown-toc li {
+    list-style: none; }
 
 .cls {
   clear: both;

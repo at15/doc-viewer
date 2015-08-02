@@ -10,7 +10,16 @@
 <div class="sidebar dark-blue-bkg">
     <ul>
         <% for(var i = 0;i < dir.length;i++) { %>
-        <li><a href="<%= dir[i].path %>"><%= dir[i].path %> <%= dir[i].dir %></a></li>
+        <li>
+            <a href="<%= dir[i].path %>">
+                <% if(dir[i].dir) { %>
+                    <i class="fa fa-folder"></i>
+                <% } else {%>
+                    <i class="fa fa-file"></i>
+                <% }%>
+                <%= dir[i].path %>
+            </a>
+        </li>
         <% } %>
     </ul>
 </div>

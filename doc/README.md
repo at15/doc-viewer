@@ -6,7 +6,7 @@ type `doc-viewer` in your doc folder and then open your browser `localhost:3000`
 
 ### view doc in a specific folder
 
-[foo](foo/README.md)
+[lib](lib/README.md)
 ![screen](screen2.PNG)
 
 make sure node has read access to that folder
