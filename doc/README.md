@@ -4,36 +4,34 @@
 
 type `doc-viewer` in your doc folder and then open your browser `localhost:3000`
 
-### view doc in a specific folder
+## Features
 
-[lib](lib/README.md)
-![screen](screen2.PNG)
+- TOC (table of content) support
+- Show folder and files in side bar
+- gfm (support task list )
+- code highlight
 
-make sure node has read access to that folder
+## example
+
+task list
+
+- [x] b
+- I am just a simple list
+- [ ] not checked
+
+links [lib](lib/README.md)
+
+images ![logo](doc-viewer.PNG)
+
+code
 
 ````javascript
 var x = 1
 var y = 3
 ````
 
-````json
-{a:123}
-````
-
-#### I am nested, yeah
+table
 
 | name | type | comment |
 | ---- | ---- | ------- |
 | id   | int  | test    |
-
-#### I am check list
-
-- [ ] a
-- [x] b
-- I am just a simple list
-- [x] checked
-- [ ] not checked
-
-## Contribute
-
-make a pr, and then ...
