@@ -26,6 +26,11 @@ var y = 3
 | ---- | ---- | ------- |
 | id   | int  | test    |
 
+#### I am check list
+
+- [ ] a
+- [x] b
+
 ## Contribute
 
 make a pr, and then ...
