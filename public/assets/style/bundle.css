@@ -35,6 +35,12 @@ ul {
   width: 70%;
   height: 100%;
   overflow: auto; }
+  .markdown-content li.task-list-item {
+    list-style: none; }
+    .markdown-content li.task-list-item .task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+      cursor: default; }
 
 .markdown-toc {
   position: fixed;

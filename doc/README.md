@@ -30,6 +30,9 @@ var y = 3
 
 - [ ] a
 - [x] b
+- I am just a simple list
+- [x] checked
+- [ ] not checked
 
 ## Contribute
 

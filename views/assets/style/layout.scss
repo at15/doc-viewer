@@ -48,6 +48,18 @@ ul{
     height: 100%;
 
     overflow: auto;
+
+    li.task-list-item {
+        list-style: none;
+
+        .task-list-item-checkbox {
+          // copied from github...
+          margin: 0 0.35em 0.25em -1.6em;
+          vertical-align: middle;
+          // otherwise the cursor would show a forbidden icon
+          cursor: default;
+        }
+    }
 }
 
 .markdown-toc{
