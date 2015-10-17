@@ -18,10 +18,8 @@ describe('Regexp match routes', function () {
 
     it('match non file routes', function () {
         var folderPattern = regexp.folder;
-        var shouldNotMatch = '/foo/bar.css';
         var shouldMatch = '/foo/bar'; // TODO:what if someone has a folder called bar.css
         var shouldAlsoMatch = '/foo/bar/';
-        expect(shouldNotMatch.match(folderPattern)).to.equal(null);
         expect(shouldMatch.match(folderPattern)[1]).to.equal('foo/bar');
         // TODO: should improve the regexp so they all return string without the trailing slash
         expect(shouldAlsoMatch.match(folderPattern)[1]).to.equal('foo/bar/');
