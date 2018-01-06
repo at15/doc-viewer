@@ -1,6 +1,6 @@
 {
   "name": "doc-viewer",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "private":false,
   "author": "at15",
   "license": "MIT",
@@ -25,10 +25,10 @@
     "gulp-sass": "latest"
   },
   "dependencies": {
-    "marked": "0.3.3",
+    "marked": "0.3.x",
     "highlight.js":"latest",
     "express": "4.x",
-    "ejs":"2.3.x",
+    "ejs":"2.5.x",
     "morgan":"latest"
   },
   "scripts": {
