@@ -1,20 +1,20 @@
 {
   "name": "doc-viewer",
   "version": "0.0.10",
-  "private":false,
+  "private": false,
   "author": "at15",
   "license": "MIT",
-  "description":"A local server to view markdown doc",
-  "homepage":"https://github.com/at15/doc-viewer",
-  "repository":{
+  "description": "A local server to view markdown doc",
+  "homepage": "https://github.com/at15/doc-viewer",
+  "repository": {
     "type": "git",
     "url": "https://github.com/at15/doc-viewer.git"
   },
-  "bin":{
-    "doc-viewer":"./bin/doc-viewer"
+  "bin": {
+    "doc-viewer": "./bin/doc-viewer"
   },
   "devDependencies": {
-    "mocha":"latest",
+    "mocha": "latest",
     "chai": "latest",
     "lodash": "latest",
     "gulp": "^3.8.1",
@@ -26,10 +26,10 @@
   },
   "dependencies": {
     "marked": "0.3.x",
-    "highlight.js":"latest",
+    "highlight.js": "latest",
     "express": "4.x",
-    "ejs":"2.5.x",
-    "morgan":"latest"
+    "ejs": "2.5.x",
+    "morgan": "latest"
   },
   "scripts": {
     "test": "gulp test"
